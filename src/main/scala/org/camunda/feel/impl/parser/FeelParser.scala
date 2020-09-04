@@ -60,7 +60,11 @@ object FeelParser extends JavaTokenParsers {
     | "index of"
     | "distinct values"
     | "get entries"
-    | "get value")
+    | "get value"
+    | "day of year"
+    | "day of week"
+    | "month of year"
+    | "week of year")
 
   // list of built-in function parameter names with whitespaces
   // -- other names match the 'parameter name' pattern

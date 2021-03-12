@@ -77,7 +77,7 @@ trait FeelScriptEngine
 
   def compile(script: String): CompiledScript = parse(script) match {
     case Success(exp, _) =>
-      CompiledFeelScript(this, ParsedExpression(exp, script))
+      CompiledFeelScript(this, new ParsedExpression(exp, script))
     case e: NoSuccess =>
       throw new ScriptException(s"failed to parse expression '$script':\n$e")
   }

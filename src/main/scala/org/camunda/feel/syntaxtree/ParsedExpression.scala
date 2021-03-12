@@ -16,4 +16,4 @@
  */
 package org.camunda.feel.syntaxtree
 
-case class ParsedExpression(expression: Exp, text: String)
+class ParsedExpression(var expression: Exp, var text: String)

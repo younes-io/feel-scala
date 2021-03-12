@@ -176,7 +176,7 @@ class FeelEngine(
   private def parse(parser: String => ParseResult[Exp],
                     expression: String): Either[Failure, ParsedExpression] =
     parser(expression) match {
-      case Success(exp, _) => Right(ParsedExpression(exp, expression))
+      case Success(exp, _) => Right(new ParsedExpression(exp, expression))
       case e: NoSuccess =>
         Left(Failure(s"failed to parse expression '$expression': $e"))
     }
